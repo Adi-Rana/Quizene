@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <% include partials/admin/head %>
+</head>
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 96%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 49%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+}
+</style>
+<body class="container">
+<header>
+    <% include partials/admin/header %>
+</header>
+<form action="/rem" method="POST" style="border:1px solid #ccc">
+  <div class="container">
+  
+  <h1>Remove a User</h1>
+  <p>Please enter the username of the user you want to remove.</p>
+  
+  <hr>
+<label for="username"><b>Username </b></label><br>
+    <input type="text" placeholder="Enter Username" name="email" required><br>
+  
+  
+  
+    <div class="clearfix">
+      <button type="button" class="cancelbtn">Cancel</button>
+      <button type="submit" class="signupbtn">Remove User</button>
+    </div>
+  </div>
+</form>
+<footer>
+    <% include partials/admin/footer %>
+</footer>
+</body>
+</html>
+  
+  
+  
+  
+  

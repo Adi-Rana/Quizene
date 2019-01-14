@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <% include partials/student/head %>
+</head>
+
+<body class="container">
+<header>
+    <% include partials/student/header %>
+</header>
+ <% include partials/student/side %>
+
+ <div class="col-sm-8">    
+        <div class="jumbotron">
+		<p><h3>C</h3></p>
+		<% cquestions.forEach(function(cquestion) { %>
+		
+		
+		
+		<ol>
+		<li><%= cquestion.que %></li>
+		</ol>
+		
+		<form action="/check" method="post">
+		<input type="radio" name="op" value="<%= cquestion.op1 %>"> <%= cquestion.op1 %><br>
+		<input type="radio" name="op" value="<%= cquestion.op2 %>"> <%= cquestion.op2 %><br>
+		<input type="radio" name="op" value="<%= cquestion.op3 %>"> <%= cquestion.op3 %><br>
+		<input type="radio" name="op" value="<%= cquestion.op4 %>"> <%= cquestion.op4 %><br><br>
+		<input type="hidden" name="q" value="<%= cquestion.que %>">
+		
+		
+		<div class="form-group">
+		
+		<button type="submit" class="btn btn-danger">Submit</button><br><br>
+		</div>
+		</form>
+		
+		<% }); %>
+		
+		</div>
+		</div>
+		
+
+
+
+
+
+
+
+<footer>
+    <% include partials/student/footer %>
+</footer>
+</body>
+</html>

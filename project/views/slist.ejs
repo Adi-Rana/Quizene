@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <% include partials/admin/head %>
+</head>
+<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+</style>
+<body class="container">
+<header>
+    <% include partials/admin/header %>
+</header>
+ <% include partials/admin/side %>
+
+ <div class="col-sm-8">    
+        <div class="jumbotron">
+		<h2> Students </h2>
+		<table>
+		<tr>
+		<th>Name</th>
+		<th>Username</th>
+		<th>College</th>
+		<th>Department</th>
+		</tr>
+		<% users.forEach(function(user) { %>
+		<tr>
+		<td><%= user.name %></td>
+		<td><%= user._id %></td>
+		<td><%= user.college %></td>
+		<td><%= user.department %></td>
+		</tr>
+		<% }); %>
+		</table>
+		</div>
+		</div>
+		
+
+
+
+
+
+
+
+<footer>
+    <% include partials/admin/footer %>
+</footer>
+</body>
+</html>
